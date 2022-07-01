@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage("install an") {
+        stage("git clone") {
             steps {
-                sh 'sudo apt install ansible'
-                echo "ansible is installed"
+                sh "git clone https://github.com/ivanbka/wp_deploy.git"
             }
         }
     }
