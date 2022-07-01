@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage("My-Pipeline") {
+        stage("install ansible") {
             steps {
-                ansible-lint -p playbook_roles.yaml
+                sudo apt update
+                sudo apt install ansible
+                echo "Ansible was installed"
             }
         }
     }
