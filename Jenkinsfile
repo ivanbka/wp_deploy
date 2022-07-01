@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("My-Pipeline") {
             steps {
-                echo "Hello World"
+                ansible-lint -p playbook_roles.yaml
             }
         }
     }
