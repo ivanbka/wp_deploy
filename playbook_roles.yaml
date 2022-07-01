@@ -1,0 +1,10 @@
+---
+- name: Install apache, wp, dependencies, mysql
+  hosts: all
+  become: yes
+
+  roles: 
+    - common
+    - server
+    - wp_install
+    - mysql

@@ -1,0 +1,6 @@
+---
+# defaults file for mysql
+mysql_root_password: mynewpassword
+new_user: wp_user
+new_pass: 12345678
+db_name: wp_db

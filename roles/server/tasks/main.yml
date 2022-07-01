@@ -1,0 +1,17 @@
+---
+# tasks file for server
+    - name: install apache
+      shell:
+        "sudo apt install apache2 apache2-utils -y"
+
+    - name: enable apache
+      shell: 
+        "sudo systemctl enable apache2"
+
+    - name: start apache
+      shell: 
+        "sudo systemctl start apache2"
+
+    - name: Copy php
+      copy: src={{ source_file }} dest={{ destin_file }} mode=0555
+      notify: Restart apache

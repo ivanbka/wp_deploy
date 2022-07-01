@@ -1,0 +1,5 @@
+---
+# handlers file for server
+  - name: Restart apache
+    shell: 
+      "sudo systemctl restart apache2"

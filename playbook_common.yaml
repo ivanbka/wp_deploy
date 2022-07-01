@@ -1,0 +1,31 @@
+---
+- name: Install and configuration common packages (dependencies)
+  become: yes
+  hosts: all
+  tasks:
+    - name: Update
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        force_apt_get: true
+
+    - name: Install dependencies
+      shell:
+        "sudo apt install php7.4 php7.4-mysql libapache2-mod-php7.4 php7.4-cli php7.4-cgi php7.4-gd -y"
+
+    - name: Install python 3
+      apt:
+        name: python3
+        state: latest
+      become: yes
+
+    - name: Install pip
+      apt:
+        name: python3-pip
+        state: present
+ 
+    - name: Install  mypysql
+      pip:
+        name: pymysql
+        state: present
+      become: yes

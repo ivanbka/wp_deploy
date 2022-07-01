@@ -1,0 +1,4 @@
+---
+# defaults file for server
+    source_file: ./info.php
+    destin_file: /var/www/html

@@ -1,0 +1,25 @@
+---
+# tasks file for wp_install
+    - name: Download WP
+      shell: 
+        "wget -c http://wordpress.org/latest.tar.gz"
+    
+    - name: Extract wp
+      shell: 
+        "tar -xzvf latest.tar.gz"
+
+    - name: rsync
+      shell: 
+       "sudo rsync -av wordpress/* /var/www/html/"
+
+    - name: chown 
+      shell: 
+        "sudo chown -R www-data:www-data /var/www/html/"
+
+    - name: chmod
+      shell:
+        "sudo chmod -R 755 /var/www/html/"
+    
+    - name: delete index.html
+      shell: 
+        "sudo rm /var/www/html/index.html"
