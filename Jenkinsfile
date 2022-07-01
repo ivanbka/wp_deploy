@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage("install an") {
             steps {
-                sudo apt update
+                sh 'sudo apt update'
+                sh 'sudo apt install ansible'
+                echo "ansible is installed"
             }
         }
     }
