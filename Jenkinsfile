@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage("install ansible") {
+        stage("install an") {
             steps {
-                echo "Ansible was installed"
+                sudo apt update
             }
         }
     }
