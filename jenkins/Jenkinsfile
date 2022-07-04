@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("Deploy") {
+            steps {
+                sh '''
+                ansible-playbook -i /home/jenkins/wp_deploy/playbook_roles.yaml
+                echo "doneeee aff"
+                '''
+            }
+        }
+    }
+}
