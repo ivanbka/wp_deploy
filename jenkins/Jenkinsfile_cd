@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
                 cd /home/jenkins/wp_deploy
-                ansible-playbook -i hosts /home/jenkins/wp_deploy/playbook_roles.yaml | true
+                ansible-playbook -i hosts /home/jenkins/wp_deploy/playbook_roles.yaml
                 echo "deploy is ready!"
                 '''
             }
