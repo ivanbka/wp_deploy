@@ -5,7 +5,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh '''
-                ansible-playbook -i /home/jenkins/wp_deploy/playbook_roles.yaml
+                ansible-playbook -i /home/jenkins/wp_deploy/playbook_roles.yaml | true
                 echo "doneeee aff"
                 '''
             }
