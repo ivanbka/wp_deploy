@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
                 ansible-playbook -i /home/jenkins/wp_deploy/playbook_roles.yaml | true
-                echo "check111"
+                echo "check111!!!"
                 '''
             }
         }
