@@ -1,2 +1,2 @@
 [ansible_servers]
-linux1 ansible_host=52.47.132.237 ansible_user=ubuntu ansible_ssh_private_key_file=/home/user/aws/work.pem
+linux1 ansible_host=13.36.209.149 ansible_user=ubuntu ansible_ssh_private_key_file=/home/user/aws/work.pem
