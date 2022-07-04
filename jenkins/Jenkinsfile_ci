@@ -5,6 +5,7 @@ pipeline {
         stage("CI") {
             steps {
                 sh '''
+                rm -rf /home/jenkins/wp_deploy || true
                 cd /home/jenkins
                 git clone https://github.com/ivanbka/wp_deploy.git || true
                 ansible-lint -p /home/jenkins/wp_deploy/playbook_roles.yaml || true
