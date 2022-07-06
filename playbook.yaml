@@ -2,6 +2,7 @@
 - name: setup Mysql with db and remote login
   become: yes
   hosts: all
+  gather_facts: no
   tasks:
    - name: Install mysql
      shell:
