@@ -5,6 +5,9 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh '''
+                rm -rf /home/jenkins/wp_deploy || true
+                cd /home/jenkins
+                git clone https://github.com/ivanbka/wp_deploy.git || true
                 cd /home/jenkins/wp_deploy
                 ansible-playbook -i hosts /home/jenkins/wp_deploy/playbook_roles.yaml
                 echo "deploy is ready!"
